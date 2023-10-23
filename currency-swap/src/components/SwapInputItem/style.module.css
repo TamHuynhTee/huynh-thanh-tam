@@ -1,0 +1,133 @@
+.swap-form-input {
+  display: flex;
+  border: 1px solid #d1d1d1;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+}
+.swap-form-input.error {
+  border: 1px solid #f44366;
+}
+
+p.error {
+  color: #f44366;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.swap-form-input .input-section {
+  display: flex;
+  flex: 1;
+}
+
+.swap-form-input .input-section > input {
+  flex: 1;
+  padding: 0;
+  border: none;
+  outline: none;
+  min-height: 50px;
+  font-size: 18px;
+  padding: 0 4px 0 16px;
+  background-color: transparent;
+}
+
+.swap-form-input .input-section > input::-webkit-outer-spin-button,
+.swap-form-input .input-section > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.swap-form-input .input-section > input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* .swap-form-input .input-section > input:focus + .label,
+.swap-form-input .input-section > input:not(:placeholder-shown) + .label {
+  transform: translateY(-50%);
+  top: 0;
+}
+.swap-form-input .input-section > input:focus + .label > label,
+.swap-form-input
+  .input-section
+  > input:not(:placeholder-shown)
+  + .label
+  > label {
+  font-size: 0.8rem;
+} */
+
+.swap-form-input .label {
+  position: absolute;
+  line-height: 1rem;
+  /* top: 25px; */
+  /* transform: translateY(-50%); */
+  left: 12px;
+  background-color: white;
+  padding: 0 8px;
+  transition: all 0.2s;
+  transform: translateY(-50%);
+  top: 0;
+}
+
+.swap-form-input .label > label {
+  line-height: 1rem;
+  color: gray;
+  transition: all 0.2s;
+}
+
+.token-select {
+  margin: 4px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background: inherit;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.token-select > .empty-token {
+  font-size: 0.9rem;
+  color: gray;
+  padding: 0 4px;
+}
+
+.token-select:hover {
+  background: #efefef;
+}
+
+.token-select > .token-info {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.token-select > .token-info > .token-name {
+  text-transform: uppercase;
+}
+
+.token-select > .token-info > .token-icon {
+  height: 32px;
+  width: 32px;
+  margin-right: 0.5rem;
+}
+
+.token-select > .select-icon {
+  height: 20px;
+  width: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .swap-form-input {
+    flex-direction: column;
+  }
+  .swap-form-input .input-section > input {
+    padding: 0 16px;
+  }
+  .token-select {
+    padding: 4px 16px;
+    background: #efefef;
+    justify-content: center;
+  }
+}

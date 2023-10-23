@@ -1,0 +1,18 @@
+.swap-button {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.swap-button button {
+  background-color: transparent;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  transition: all 0.2s;
+  transform: rotate(90deg);
+}
+.swap-button button:hover {
+  background-color: #efefef;
+  transform: rotate(90deg) scale(1.1);
+}
